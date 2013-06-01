@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "FlkSrchr",
+  "description": "Flickr Searcher",
+  "version": "1.0",
+
+  "background" : {
+    "scripts": ["jquery.min.js", "background.js"]
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "clipboardWrite"
+  ],
+
+  "content_security_policy": "script-src 'self' https://www.flickr.com; object-src 'self'",
+  "options_page": "option_page.html",
+
+  "browser_action": {
+    "default_title": "FlkSrchr",
+    "default_icon": "icon48.png",
+    "default_popup": "popup.html"
+  },
+  "icons": { "48": "icon48.png",
+          "128": "icon128.png" }
+}

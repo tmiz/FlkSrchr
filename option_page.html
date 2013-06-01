@@ -1,0 +1,80 @@
+<html>
+<head><title>FlkSrchr</title></head>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href='options.css' rel='stylesheet' type='text/css'>
+<body>
+
+
+<h1 id="title">FlkSrchr</h1>
+<div id ="subtitle">Flickr Public Photo Searching extension for Bloggers </div>
+
+
+<hr>
+
+<h3>Sort Method</h3>
+<select id="sort">
+ <option value="date-posted-asc">Posted Date(asc)</option>
+ <option value="date-posted-desc">Posted Date(desc)</option>
+ <option value="date-taken-asc">Taken Date(asc)</option>
+ <option value="date-taken-desc">Taken Date(desc)</option>
+ <option value="interestingness-desc">Interestingness(desc)</option>
+ <option value="interestingness-asc">Interestingness(asc)</option>
+ <option value="relevance">Relevance</option>
+</select>
+
+<h3>Tag</h3>
+<input value="" id="tag">(Optional)
+<div class="caution">
+Plural items require to input with camma separated.
+</div>
+
+<h3>User ID</h3>
+<input value="" id="user_id">(Optional)
+
+<div class="caution">
+If you don't know your id, please check at <a href="http://idgettr.com/" target="_blank">idGettr</a>
+</div>
+
+<h3>Text Search</h3>
+<input value="" id="text">(Optional)
+
+
+<h3>Number of items</h3>
+<select id="page_num">
+ <option value="100">100</option>
+ <option value="200">200</option>
+ <option value="300">300</option>
+</select>
+
+<h3>Click Action</h3>
+<select id="click_action">
+ <option value="copyToClipboard">copy HTML snippet to clipboard</option>
+ <option value="openLink">open link</option>
+</select>
+
+<h3>Image Size of which to be copied to clipboard</h3>
+<select id="image_size">
+ <option value="0">Square 75</option>
+ <option value="1">Square 150</option>
+ <option value="2">Thumbnail</option>
+ <option value="3">Small 240</option>
+ <option value="4">Small 320</option>
+ <option value="5">Medium 500</option>
+ <option value="6">Medium 600</option>
+ <option value="7">Medium 800</option>
+ <option value="8">Large 1024</option>
+ <option value="9">Original</option>
+</select>
+
+
+
+<br><br><br>
+<button id="save">Apply</button>
+<div id="status"></div>
+</body>
+
+<script src="options.js"></script>
+
+</html>
+

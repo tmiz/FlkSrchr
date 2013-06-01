@@ -1,0 +1,67 @@
+
+
+
+// initial values
+if (localStorage["favorite_sort"] == null) {
+    localStorage["favorite_sort"] = 'interestingness-desc';
+}
+if ( localStorage["tag"] == null) {
+    localStorage["tag"] = "";
+}
+if ( localStorage["user_id"] == null) {
+    localStorage["user_id"] = "";
+}
+if ( localStorage["text"] == null ) {
+    localStorage["text"] = "";
+}
+if ( localStorage["page_num"] == null ) {
+    localStorage["page_num"] = "100";
+}
+
+// technique of using JQuery on Background.js 
+function rewriteAction() {
+    chrome.tabs.executeScript(null, { file: "jquery.min.js"},
+        function(){
+            chrome.tabs.executeScript(null, { file: "rewrite.js" }, function() {});
+    });
+}
+ 
+chrome.browserAction.onClicked.addListener(rewriteAction);
+rewriteAction();
+
+
+// class difinitions
+function Background() {}
+
+Background.prototype = {
+    builtString : "",
+    api_key : FLICKR_API_KEY,
+    url : 'https://www.flickr.com/services/rest/',
+    data : null,
+    getContents : function() {
+        $.ajax({
+            type : 'GET',
+            url : this.url,
+            data : {
+                format : 'json',
+                method : 'flickr.photos.search', // 必須 :: 実行メソッド名 
+                api_key : this.api_key, // 必須 :: API Key
+                user_id : localStorage["user_id"], //'38905483@N00', // 任意 :: userID
+                sort : localStorage["favorite_sort"],
+                tags : localStorage["tag"], // 任意 :: タグで検索
+                text : localStorage["text"],
+                per_page : localStorage["page_num"], // 任意 :: 1回あたりの取得件数
+            },
+            dataType : 'jsonp',
+            jsonp : 'jsoncallback', // Flickrの場合はjsoncallback
+            success : this.callbackOnSuccess // 通信が成功した場合の処理
+        });
+    },
+    callbackOnSuccess : function(data){
+        bg.data = data;
+    }
+}
+
+
+var bg = new Background();
+bg.getContents();

@@ -1,0 +1,21 @@
+
+
+
+
+img {
+    border-width: 0px;
+
+}
+
+@-webkit-keyframes clipSign {
+0% {
+    opacity: 1.0;
+}
+32% {
+    opacity: 0.2;
+}
+
+100% {
+    opacity: 1.0;
+}
+}
