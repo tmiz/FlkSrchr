@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "FlkSrchr",
   "description": "Flickr Searcher",
-  "version": "0.2.0",
+  "version": "0.2.1",
 
   "background" : {
     "scripts": ["external_js/jquery.min.js", "background.js"]
@@ -22,6 +22,5 @@
     "default_popup": "popup.html"
   },
   "icons": { "48": "icon48.png",
-          "128": "icon128.png" },
-  "update_url" : "http://tg.tmiz.net/flckrSrchr/updates.xml"
+          "128": "icon128.png" }
 }
