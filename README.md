@@ -12,7 +12,6 @@ Flickr Public Photo Searching extension for Bloggers
 Consequently, you can use public flickr photos via Chrome Popup Menu.
 
 
-![Alt text](http://farm6.static.flickr.com/5332/8913239452_ed8a795c80_o.jpg)
-
+![Alt text](http://farm6.static.flickr.com/5332/8913239452_6433d1608b_c.jpg)
 
 (C) 2013 Tomoo Mizukami
