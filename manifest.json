@@ -5,7 +5,7 @@
   "version": "1.0",
 
   "background" : {
-    "scripts": ["jquery.min.js", "background.js"]
+    "scripts": ["external_js/jquery.min.js", "background.js"]
   },
   "permissions": [
     "http://*/*",
