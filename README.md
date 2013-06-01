@@ -15,7 +15,7 @@ Consequently, you can use public flickr photos via Chrome Popup Menu.
 ![Alt text](http://farm6.static.flickr.com/5332/8913239452_6433d1608b_c.jpg)
 
 
-[Release Binary(crx)](http://tg.tmiz.net/flckrSrchr/release/FlkSrchr.0.2.0.crx,v0.2.0)
+[Release Binary(crx)](http://tg.tmiz.net/flckrSrchr/release/FlkSrchr.0.2.0.crx)
 
 
 (C) 2013 Tomoo Mizukami
