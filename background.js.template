@@ -44,17 +44,17 @@ Background.prototype = {
             url : this.url,
             data : {
                 format : 'json',
-                method : 'flickr.photos.search', // 必須 :: 実行メソッド名 
-                api_key : this.api_key, // 必須 :: API Key
-                user_id : localStorage["user_id"], //'38905483@N00', // 任意 :: userID
+                method : 'flickr.photos.search', 
+                api_key : this.api_key, 
+                user_id : localStorage["user_id"], 
                 sort : localStorage["favorite_sort"],
-                tags : localStorage["tag"], // 任意 :: タグで検索
+                tags : localStorage["tag"], 
                 text : localStorage["text"],
-                per_page : localStorage["page_num"], // 任意 :: 1回あたりの取得件数
+                per_page : localStorage["page_num"], 
             },
             dataType : 'jsonp',
-            jsonp : 'jsoncallback', // Flickrの場合はjsoncallback
-            success : this.callbackOnSuccess // 通信が成功した場合の処理
+            jsonp : 'jsoncallback', 
+            success : this.callbackOnSuccess 
         });
     },
     callbackOnSuccess : function(data){
