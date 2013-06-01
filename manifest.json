@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "FlkSrchr",
   "description": "Flickr Searcher",
-  "version": "1.0",
+  "version": "0.2",
 
   "background" : {
     "scripts": ["external_js/jquery.min.js", "background.js"]
