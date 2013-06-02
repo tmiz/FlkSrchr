@@ -102,7 +102,30 @@ $(function(){
         });
     }
 
+    function doReload() {
+        var bg = chrome.extension.getBackgroundPage().bg;
+        $("#reload").css("-webkit-animation-name", "loadingRotate");
+        $("#reload").css("-webkit-animation-duration", "1s");
+        $("#reload").css("-webkit-animation-iteration-count","infinite");
+            $("#reload").css("-webkit-animation-play-state", "running");
+        
+        bg.getContents();
+    }
+
     $("#setting").click(function(){ openOption(); });
+    $("#reload").click(function(){ doReload(); });
     showFlickr();
+
+
+    chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+        if(request.method == 'loadComplete') {
+            $("#reload").css("-webkit-animation-play-state", "paused");
+            showFlickr();
+        }
+        sendResponse({});
+    });
+
 });
+
+
 

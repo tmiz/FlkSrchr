@@ -55,11 +55,15 @@ Background.prototype = {
             },
             dataType : 'jsonp',
             jsonp : 'jsoncallback', 
-            success : this.callbackOnSuccess 
+            success : this.callbackOnSuccess,
+            complete : this.completeFunction
         });
     },
     callbackOnSuccess : function(data){
         bg.data = data;
+    },
+    completeFunction : function () {
+        chrome.extension.sendRequest({"method": "loadComplete"}, function(response) {});
     }
 }
 
