@@ -23,5 +23,9 @@ Consequently, you can use public flickr photos via Chrome Popup Menu.
 
 [Release on Chrome Web Store](https://chrome.google.com/webstore/detail/flksrchr/djpcahlaiokljgbapkfpnfncfmbefblj/)
 
+## History
+v0.2.2 added "reload button" on popup menu (JUN 2th 2013)
+v0.2.0 released (JUN 1th 2013)
+
 
 (C) 2013 Tomoo Mizukami
